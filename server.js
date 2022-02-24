@@ -11,9 +11,10 @@ dotenv.config();
 
 const config = process.env.ENVIRONMENT || 'development';
 
-const Logger = require('logger');
+//const Logger = require('../lib/logger/logger');
+const log = require('logger').createLogger(); // logs to STDOUT
 
-const log = new Logger('routes/auth');
+//const log = new Logger('routes/auth');
 const router = express.Router();
 
 // use the global csds instance created in app.js for the APIs that need it
