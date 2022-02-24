@@ -11,7 +11,7 @@ dotenv.config();
 
 const config = process.env.ENVIRONMENT || 'development';
 
-const Logger = require('../lib/logger/logger');
+const Logger = require('logger');
 
 const log = new Logger('routes/auth');
 const router = express.Router();
