@@ -6,8 +6,10 @@ const jwt = require('jsonwebtoken');
 const _ = require('lodash');
 const NodeCache = require('node-cache');
 const { v4: uuidv4 } = require('uuid');
+const dotenv = require('dotenv');
+dotenv.config();
 
-const config = require('../config/config')[process.env.ENVIRONMENT || 'development'];
+const config = process.env.ENVIRONMENT || 'development';
 
 const Logger = require('../lib/logger/logger');
 
