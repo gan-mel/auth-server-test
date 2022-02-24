@@ -57,13 +57,13 @@ function getConfig (req, res) {
     let authConfig = {
         implicit: {
             'LE Settings': {
-                'Authentication Endpoint': `${config.host}api/auth/token`
+                'Authentication Endpoint': `${process.env.host}api/auth/token`
             }
         },
         code: {
             'LE Settings': {
-                'Authentication Endpoint': `${config.host}api/auth/code`,
-                'Token Endpoint': `${config.host}api/auth/token`,
+                'Authentication Endpoint': `${process.env.host}api/auth/code`,
+                'Token Endpoint': `${process.env.host}api/auth/token`,
                 'Client ID': '[Site ID]',
                 'Client Secret': 'Secret'
             }
