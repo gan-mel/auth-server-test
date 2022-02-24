@@ -18,13 +18,14 @@ const log = require('logger').createLogger(); // logs to STDOUT
 const router = express.Router();
 
 // use the global csds instance created in app.js for the APIs that need it
-const leAPIs = require('../lib/le_apis');
+//const leAPIs = require('../lib/le_apis');
 const csds = global.csds;
 const oauth = {
     consumer_key: process.env.OAUTH_KEY,
     consumer_secret: process.env.OAUTH_SECRET
 };
-const visitInfoAPI = new leAPIs.VisitInfoAPI({csds, oauth})
+//const visitInfoAPI = new leAPIs.VisitInfoAPI({csds, oauth})
+const visitInfoAPI = "x";
 const codeCache = new NodeCache({
     stdTTL: 30
 });
